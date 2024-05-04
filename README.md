@@ -37,9 +37,21 @@ Both data sources were extracted from data made publicly available by the United
 <a name="building"></a>
 ### Building the Flight Delay Matrices 
 
-**Description:** In this section
+**Description:** In this section, the P (probability), D (delay), and E (expected delay) matrices are constructed. Each of these matrices will come in three varieties: day of the week (i.e., D_day), airline carrier (i.e., D_airline), and aircraft type (i.e., D_airplane). The explanation for each type of matrix follows below:
 
-**Lines of Code:** Lines 14 - 29.
+  ```
+  - D_day: Average delay on each route, indexed by the day of the week. The 
+    dimension of M_day is 333x339x8, since there are 339 airports in 
+    the network. The 3rd dimension denotes the day of the week.
+    Hence, in D(:,:,i), i = 1 is a Monday, i = 7 is a Sunday, while i = 8 
+    refers to the total average.
+    The rows of D_day represent the origin airport (OA), while the columns
+    denote the destination airport (DA).
+  - D_airline: Average delay on each route, indexed by airline.
+  - D_airplane: Average delay on each route, indexed by airplane type.
+  ```
+
+**Lines of Code:** Lines 30 - 168.
 
 ([ back to top ](#back_to_top))
 
