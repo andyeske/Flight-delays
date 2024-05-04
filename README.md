@@ -31,5 +31,70 @@ Both data sources were extracted from data made publicly available by the United
 
 **Lines of Code:** Lines 14 - 29.
 
+([ back to top ](#back_to_top))
 
+---
+<a name="building"></a>
+### Building the Flight Delay Matrices 
 
+**Description:** In this section
+
+**Lines of Code:** Lines 14 - 29.
+
+([ back to top ](#back_to_top))
+
+---
+<a name="conducting"></a>
+### Conducting the Delay Analysis
+
+**Description:** In this section
+
+**Lines of Code:** Lines 14 - 29.
+
+([ back to top ](#back_to_top))
+
+---
+<a name="markov"></a>
+### Markov Chain Computations
+
+**Description:** In this section
+
+**Lines of Code:** Lines 14 - 29.
+
+([ back to top ](#back_to_top))
+
+---
+<a name="querying"></a>
+### Querying Route-specific Data
+
+**Description:** In this section
+
+**Lines of Code:** Lines 14 - 29.
+
+([ back to top ](#back_to_top))
+
+---
+<a name="additional"></a>
+### Additional Plots
+
+**Description:** In this section
+
+**Lines of Code:** Lines 14 - 29.
+
+([ back to top ](#back_to_top))
+
+---
+<a name="storing"></a>
+### Storing the Data
+
+**Description:** In this section
+
+**Lines of Code:** Lines 14 - 29.
+
+([ back to top ](#back_to_top))
+
+## Authors
+
+Andy Eskenazi, Marek Homola, Olivier Ng'weno Kigotho <br />
+Department of Aeronautics and Astronautics <br />
+Massachusetts Institute of Technology, 2024 <br />
