@@ -39,7 +39,7 @@ Both data sources were extracted from data made publicly available by the United
 <a name="building"></a>
 ### Building the Flight Delay Matrices 
 
-**Description:** In this section, the P (probability), D (delay), and E (expected delay) matrices are constructed. Each of these three matrix types will come in three varieties: day of the week (i.e., D_day), airline carrier (i.e., D_airline), and aircraft type (i.e., D_airplane). The explanation for each type of matrix follows below:
+**Description:** In this section, the P (probability), D (delay), and E (expected delay) matrices are constructed. Each of these three matrix types will come in three varieties: day of the week (i.e., ```D_day ```), airline carrier (i.e., ```D_airline```), and aircraft type (i.e., ```D_airplane```). The explanation for each type of matrix follows below:
 
   ```
   - D_day: Average delay on each route, indexed by the day of the week. The 
@@ -112,9 +112,9 @@ Both data sources were extracted from data made publicly available by the United
 ### Storing the Data
 
 **Description:** In this section, the user can elect to export the D, P, E and S matrices as .csv files, according to the conducted analysis. The default matrices correspond to the average flight delay values, irrespective of day of the week, aircraft type or airline carrier. To export by:
-* Day of the week: modify the index i on  ```D_day(:,:,i), P_day(:,:,i,1), and E_day(:,:,i)```.
-* Aircraft Type: modify the index i on D_airplane(:,:,i), P_airplane(:,:,i,1), and E_airplane(:,:,i).
-* Airline Carrier: modify the index i on D_airline(:,:,i), P_airline(:,:,i,1), and E_airline(:,:,i).
+* Day of the week: modify the index i on  ```D_day(:,:,i), P_day(:,:,i,1), E_day(:,:,i)```.
+* Aircraft Type: modify the index i on  ```D_airplane(:,:,i), P_airplane(:,:,i,1), E_airplane(:,:,i)```.
+* Airline Carrier: modify the index i on  ```D_airline(:,:,i), P_airline(:,:,i,1), E_airline(:,:,i)```.
 
 **User Action:** Modify the following code (lines 468 - 471) according to the user preferences:
 
