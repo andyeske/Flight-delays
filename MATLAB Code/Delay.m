@@ -2,12 +2,12 @@
 % The following code serves as a complement to the main paper, and is used 
 % to conduct the delay-related calculations.
 
-% The following script is divided into 3 sections:
-% 1: Importing the required datasets
-% 2: Building the delay matrices
-% 3: Conducting the delay analysis
+% The following script is divided into 7 sections:
+% 1: Importing the Required Datasets
+% 2: Building the Flight Delay Matrices
+% 3: Conducting the Delay Analysis
 % 4: Markov Chain Computations
-% 5: Quering Route-specific data
+% 5: Querying Route-specific data
 % 6: Additional Plots
 % 7: Storing the Data
 
@@ -281,7 +281,7 @@ x = reordercats(x,Airport_Codes(s_in));
 times = arr_Delay(s_in);
 yyaxis left
 bar(x,times,'FaceAlpha',.5)
-xlabel('Arrival Airport')
+xlabel('Origin Airport')
 ylabel('Expected Arrival Delay (min)')
 yyaxis right
 plot(x,100*s_sorted(1:30),'--o','LineWidth',2)
@@ -466,6 +466,6 @@ set(gca,'FontSize',12)
 % 'Airlines', modifying the index i on D_airline(:,:,i).
 
 writematrix(D_day(:,:,8),'Average D.csv');
-writematrix(P_day(oa,da,8,1),'Average P.csv');
+writematrix(P_day(:,:,8,1),'Average P.csv');
 writematrix(E_day(:,:,8),'Average E.csv');
 writematrix(Markov,'Markov.csv');
