@@ -112,7 +112,7 @@ Both data sources were extracted from data made publicly available by the United
 ### Storing the Data
 
 **Description:** In this section, the user can elect to export the D, P, E and S matrices as .csv files, according to the conducted analysis. The default matrices correspond to the average flight delay values, irrespective of day of the week, aircraft type or airline carrier. To export by:
-* Day of the week: modify the index i on D_day(:,:,i), P_day(:,:,i,1), and E_day(:,:,i).
+* Day of the week: modify the index i on  ```D_day(:,:,i), P_day(:,:,i,1), and E_day(:,:,i)```.
 * Aircraft Type: modify the index i on D_airplane(:,:,i), P_airplane(:,:,i,1), and E_airplane(:,:,i).
 * Airline Carrier: modify the index i on D_airline(:,:,i), P_airline(:,:,i,1), and E_airline(:,:,i).
 
