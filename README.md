@@ -13,11 +13,10 @@ In this repository, we provide an overview of the MATLAB script utilized to:
 
 1. [ Importing the Datasets ](#importing)
 2. [ Building the Flight Delay Matrices ](#building)
-3. [ Conducting the Delay Analysis ](#conducting)
-4. [ Markov Chain Computations ](#markov)
-5. [ Querying Route-specific Data ](#querying)
-6. [ Additional Plots ](#additional)
-7. [ Storing the Data ](#storing)
+3. [ Markov Chain Computations ](#markov)
+4. [ Querying Route-specific Data ](#querying)
+5. [ Additional Plots ](#additional)
+6. [ Storing the Data ](#storing)
 
 ---
 <a name="importing"></a>
@@ -59,23 +58,13 @@ Both data sources were extracted from data made publicly available by the United
 
 **User Action:** Simply click on _Run Section_.
 
-**Lines of Code:** Lines 30 - 168.
-
-([ back to top ](#back_to_top))
-
----
-<a name="conducting"></a>
-### 3: Conducting the Delay Analysis
-
-**Description:** In this section
-
-**Lines of Code:** Lines 169 - 231.
+**Lines of Code:** Lines 30 - 231.
 
 ([ back to top ](#back_to_top))
 
 ---
 <a name="markov"></a>
-### 4: Markov Chain Computations
+### 3: Markov Chain Computations
 
 **Description:** In this section, the Markov chain computations are conducted to obtain a stationary distribution for expected arrival flight delays in the U.S. airline route network. These calculations exploit a thought experiment, in which a passenger embarks itself in an infinite random walk across the airline network, starting at airport A, taking an infinite number of flights (each with an associated delay probability), and eventually ending at airport B. As the results elucidate, what matters is not the destination airport B, but the origin airport A (indeed, all the columns of the stationary matrix S, which correspond to the destination airports, will be identical). The description of utilized Markov _transition matrix_ to obtain the stationary distribution follows below:
 
@@ -98,7 +87,7 @@ The results from taking the 20th power of the Markov transition probility matrix
 
 According to this plot, in the infinite random walks thought experiment, a passenger leaving out of Denver, irrespective of where it will ultimately end its journey, would be the most likely to be delayed, followed by Atlanta, Chicago, Dallas and Las Vegas.
 
-**User Action:** Simply click on _Run Section_.
+**User Action:** Simply click on _Run Section_. However, it is possible to modify the code in this section (lines 244 - 246) to obtain the stationary distribution results using data specific to a day of the week, airline or aircraft type. 
 
 **Lines of Code:** Lines 232 - 290.
 
@@ -106,7 +95,7 @@ According to this plot, in the infinite random walks thought experiment, a passe
 
 ---
 <a name="querying"></a>
-### 5: Querying Route-specific Data
+### 4: Querying Route-specific Data
 
 **Description:** In this section, the user selects a particular route using the standard IATA airport three letter codes (e.g., SFO - HNL) and a day of the week, and the code returns a plot displaying the route-specific flight delay statistics. In the case where the selected route does not exist in the U.S. airline route network, the code would display ```Selected route does not exist in the database```. A sample plot is shown below: 
 
@@ -138,7 +127,7 @@ Then, simply click on _Run Section_.
 
 ---
 <a name="additional"></a>
-### 6: Additional Plots
+### 5: Additional Plots
 
 **Description:** In this section, two additional plots are generated, corresponding to the network average delays disaggregated by airline and aircraft type. It is possible to modify the code in [ Section 2 ](#building) to display these results according to a particular day of the week, as opposed to the average. The following two plots are generated: 
 
@@ -164,7 +153,7 @@ Here, the left y-axis describes the expected arrival flight delay associated wit
 
 ---
 <a name="storing"></a>
-### Storing the Data
+### 6: Storing the Data
 
 **Description:** In this section, the user can elect to export the D, P, E and S matrices as .csv files, according to the conducted analysis. The default matrices correspond to the average flight delay values, irrespective of day of the week, aircraft type or airline carrier. To export by:
 * Day of the week: modify the index i on  ```D_day(:,:,i), P_day(:,:,i,1), E_day(:,:,i)```.
