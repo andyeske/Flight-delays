@@ -1,8 +1,10 @@
 <a name="back_to_top"></a>
 # Quantifying and Exploring Flight Delay Trends in the U.S. Airline Industry
 
+## Summary
+
 In this repository, we provide an overview of the MATLAB script utilized to:
-1) Compute the flight delay matrices featured in our work: P (probability), D (delay), E (expected delay) and S (stationary distribution).
+1) Compute the flight delay matrices featured in our work: P (probability), D (delay), E (expected delay), S (Markov transition matrix) and S<sup>n</sup> (stationary distribution).
 2) Modify the code to obtain route-specific flight delay information.
 
 ## MATLAB Code
@@ -75,7 +77,16 @@ Both data sources were extracted from data made publicly available by the United
 <a name="markov"></a>
 ### 4: Markov Chain Computations
 
-**Description:** In this section
+**Description:** In this section, the Markov chain computations are conducted to obtain a stationary distribution for expected arrival flight delays in the U.S. airline route network. These calculations exploit a thought experiment, in which a passenger embarks itself in an infinite random walk across the airline network, starting at airport A, taking an infinite number of flights (each with an associated delay probability), and eventually ending at airport B. As the results elucidate, what matters is not the destination airport B, but the origin airport A (indeed, all the columns of the stationary matrix S, which correspond to the destination airports, will be identical). The description of utilized Markov _transition matrix_ to obtain the stationary distribution follows below:
+
+  ```
+  The rows of this matrix represent the origin airports, while the columns represent the destination. In 
+  essence, the elements in each of the columns add up to 1, and the elements themselves represent the  
+  number of flights out of airport i heading to airport j that are delayed, divided by the total number 
+  of flights that are delayed heading into airport j. In essence, this matrix contains the answer to the 
+  following question: out of all delayed flights arriving at airport j, what percentage correspond to 
+  those coming from airport i?
+  ```
 
 **User Action:** Simply click on _Run Section_.
 
