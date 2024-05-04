@@ -92,8 +92,10 @@ Both data sources were extracted from data made publicly available by the United
 <p align="left">
 <img src="https://github.com/andyeske/Flight-delays/blob/main/Sample%20Plots/Route%20Example.jpg" width="500"> 
 
-**Figure:** _Route-specific flight delay statistics, corresponding to SFO - HNL. The top most plot displays three bars, for the selected day of week, average weekday, and airport average expected arrival delays; the middle plot presents the arrival delays on the route, by operating airline; the bottom plots shows the aircraft-specific data for the route. The left y-axis describes the expected arrival flight delay, while the right y-axis denotes the probability that the would be delayed. The results are specific to January 2019 data_.
+**Figure:** _Route-specific flight delay statistics, corresponding to SFO - HNL_.
 </p>
+
+Here, the top most plot displays three bars, for the selected day of week, average weekday, and airport average expected arrival delays; the middle plot presents the arrival delays on the route, by operating airline; the bottom plots shows the aircraft-specific data for the route. The left y-axis describes the expected arrival flight delay, while the right y-axis denotes the probability that the would be delayed. The results are specific to January 2019 data.
 
 **User Action:** To obtain custom route-specific flight delay statistics, modify the following code (lines 294, 296 and 298) according to the user preferences:
 
@@ -122,14 +124,16 @@ Then, simply click on _Run Section_.
 <p align="left">
 <img src="https://github.com/andyeske/Flight-delays/blob/main/Sample%20Plots/Delay%20by%20Airline.jpg" width="500"> 
 
-**Figure:** _Delay by Airline Carrier. Here, the left y-axis describes the expected arrival flight delay associated with flying on a particular airline carrier, while the right y-axis denotes the probability that a flight on a given airline would be delayed. The results are specific to January 2019 data_.
+**Figure:** _Delay by Airline Carrier_.
 </p>
 
 <p align="left">
 <img src="https://github.com/andyeske/Flight-delays/blob/main/Sample%20Plots/Delay%20by%20Aircraft.jpg" width="500"> 
 
-**Figure:** _Delay by Aircraft Type. Here, the left y-axis describes the expected arrival flight delay associated with flying on a particular aircraft type, while the right y-axis denotes the probability that a flight on a given aircraft type would be delayed. The results are specific to January 2019 data_.
+**Figure:** _Delay by Aircraft Type_.
 </p>
+
+Here, the left y-axis describes the expected arrival flight delay associated with flying on a particular airline carrier and/or aircraft type, while the right y-axis denotes the probability that a flight on a given airline and/or aircraft would be delayed. The results are specific to January 2019 data.
 
 **User Action:** Simply click on _Run Section_.
 
