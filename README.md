@@ -29,6 +29,8 @@ Both data sources were extracted from data made publicly available by the United
 * Flight Delay data: to go the BTS Marketing Carrier [On-Time Performance](https://www.transtats.bts.gov/DL_SelectFields.aspx?gnoyr_VQ=FGK&QO_fu146_anzr=b0-gvzr). 
 * Tail Number data: go to the BTS Air Carrier Financial [Schedule P-43 Inventory](https://www.transtats.bts.gov/DL_SelectFields.aspx?gnoyr_VQ=GEH&QO_fu146_anzr=Nv4%20Pn44vr4%20Sv0n0pvny).
 
+**User Action:** Download the MATLAB script (which can be found [here](https://github.com/andyeske/Flight-delays/tree/main/MATLAB%20Code)), the two datatables listed above, and save everything in the same folder. Once in the MATLAB environment, simply click on _Run Section_.
+
 **Lines of Code:** Lines 14 - 29.
 
 ([ back to top ](#back_to_top))
@@ -37,19 +39,23 @@ Both data sources were extracted from data made publicly available by the United
 <a name="building"></a>
 ### Building the Flight Delay Matrices 
 
-**Description:** In this section, the P (probability), D (delay), and E (expected delay) matrices are constructed. Each of these matrices will come in three varieties: day of the week (i.e., D_day), airline carrier (i.e., D_airline), and aircraft type (i.e., D_airplane). The explanation for each type of matrix follows below:
+**Description:** In this section, the P (probability), D (delay), and E (expected delay) matrices are constructed. Each of these three matrix types will come in three varieties: day of the week (i.e., D_day), airline carrier (i.e., D_airline), and aircraft type (i.e., D_airplane). The explanation for each type of matrix follows below:
 
   ```
   - D_day: Average delay on each route, indexed by the day of the week. The 
-    dimension of M_day is 333x339x8, since there are 339 airports in 
+    dimension of D_day is 333x339x8, since there are 339 airports in 
     the network. The 3rd dimension denotes the day of the week.
     Hence, in D(:,:,i), i = 1 is a Monday, i = 7 is a Sunday, while i = 8 
     refers to the total average.
     The rows of D_day represent the origin airport (OA), while the columns
     denote the destination airport (DA).
-  - D_airline: Average delay on each route, indexed by airline.
-  - D_airplane: Average delay on each route, indexed by airplane type.
+  - D_airline: Average delay on each route, indexed by airline (18 different     
+    carriers considered in this work).
+  - D_airplane: Average delay on each route, indexed by airplane type (41 
+    different types considered in this work).
   ```
+
+**User Action:** Simply click on _Run Section_.
 
 **Lines of Code:** Lines 30 - 168.
 
