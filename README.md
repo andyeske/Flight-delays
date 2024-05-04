@@ -87,9 +87,27 @@ Both data sources were extracted from data made publicly available by the United
 <a name="querying"></a>
 ### 5: Querying Route-specific Data
 
-**Description:** In this section
+**Description:** In this section, the user selects a particular route using the standard IATA airport three letter codes (e.g., SFO - HNL) and a day of the week, and the code returns a plot displaying the route-specific flight delay statistics. In the case where the selected route does not exist in the U.S. airline route network, the code would display ```Selected route does not exist in the database```. A sample plot is shown below: 
 
-**User Action:** Simply click on _Run Section_.
+<p align="left">
+<img src="https://github.com/andyeske/Flight-delays/blob/main/Sample%20Plots/Route%20Example.jpg" width="500"> 
+
+**Figure:** _Route-specific flight delay statistics, corresponding to SFO - HNL. The top most plot displays three bars, for the selected day of week, average weekday, and airport average expected arrival delays; the middle plot presents the arrival delays on the route, by operating airline; the bottom plots shows the aircraft-specific data for the route. The left y-axis describes the expected arrival flight delay, while the right y-axis denotes the probability that the would be delayed. The results are specific to January 2019 data_.
+</p>
+
+**User Action:** To obtain custom route-specific flight delay statistics, modify the following code (lines 294, 296 and 298) according to the user preferences:
+
+  ```
+  Origin = 'SFO';
+  ```
+  ```
+  Destination = 'HNL';
+  ```
+  ```
+  Day = 'Friday';
+  ```
+
+Then, simply click on _Run Section_.
 
 **Lines of Code:** Lines 291 - 409.
 
@@ -128,7 +146,7 @@ Both data sources were extracted from data made publicly available by the United
 * Aircraft Type: modify the index i on  ```D_airplane(:,:,i), P_airplane(:,:,i,1), E_airplane(:,:,i)```.
 * Airline Carrier: modify the index i on  ```D_airline(:,:,i), P_airline(:,:,i,1), E_airline(:,:,i)```.
 
-**User Action:** Modify the following code (lines 468 - 471) according to the user preferences:
+**User Action:** To export custom datasets, modify the following code (lines 468 - 471) according to the user preferences:
 
   ```
   writematrix(D_day(:,:,8),'Average D.csv');
@@ -137,7 +155,7 @@ Both data sources were extracted from data made publicly available by the United
   writematrix(Markov,'Markov.csv');
   ```
 
- Then, simply click on _Run Section_. These .csv files will be saved in the same path as the MATLAB code itself.
+Then, simply click on _Run Section_. These .csv files will be saved in the same path as the MATLAB code itself.
 
 **Lines of Code:** Lines 452 - 472.
 
