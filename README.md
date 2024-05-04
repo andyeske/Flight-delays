@@ -4,7 +4,7 @@
 ## Summary
 
 In this repository, we provide an overview of the MATLAB script utilized to:
-1) Compute the flight delay matrices featured in our work: P (probability), D (delay), E (expected delay), S (Markov transition matrix) and S<sup>n</sup> (stationary distribution).
+1) Compute the flight delay matrices featured in our work: P (probability), D (delay), E (expected delay), S (Markov transition) and S<sup>n</sup> (stationary distribution).
 2) Modify the code to obtain route-specific flight delay information.
 
 ## MATLAB Code
@@ -87,6 +87,16 @@ Both data sources were extracted from data made publicly available by the United
   following question: out of all delayed flights arriving at airport j, what percentage correspond to 
   those coming from airport i?
   ```
+
+The results from taking the 20th power of the Markov transition probility matrix can be seen in the plot below: 
+
+<p align="left">
+<img src="https://github.com/andyeske/Flight-delays/blob/main/Sample%20Plots/Infinite%20Walks.jpg" width="500"> 
+
+**Figure:** _Stationary Distribution Results_.
+</p>
+
+According to this plot, in the infinite random walks thought experiment, a passenger leaving out of Denver, irrespective of where it will ultimately end its journey, would be the most likely to be delayed, followed by Atlanta, Chicago, Dallas and Las Vegas.
 
 **User Action:** Simply click on _Run Section_.
 
