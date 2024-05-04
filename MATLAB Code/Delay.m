@@ -62,7 +62,7 @@ Weekdays = {'Monday';'Tuesday';'Wednesday';'Thursday';'Friday';'Saturday';'Sunda
 
 % Matrices
 % - D_day: Average delay on each route, indexed by the day of the week. The 
-%   dimension of M_day is 333x339x8, since there are 339 airports in 
+%   dimension of D_day is 333x339x8, since there are 339 airports in 
 %   the network. The 3rd dimension denotes the day of the week.
 %   Hence, in D(:,:,i), i = 1 is a Monday, i = 7 is a Sunday, while i = 8 
 %   refers to the total average.
@@ -461,7 +461,7 @@ set(gca,'FontSize',12)
 % - To export by a particular days of the week, these can be selected by 
 % modifying the index i on D_day(:,:,i).
 % - To export by aircraft types, these can be selected from the vector
-% 'Aircraft', modifying the index i on D_aircraft(:,:,i).
+% 'Aircraft', modifying the index i on D_airplane(:,:,i).
 % - To export by airline carriers, these can be selected from the vector
 % 'Airlines', modifying the index i on D_airline(:,:,i).
 
