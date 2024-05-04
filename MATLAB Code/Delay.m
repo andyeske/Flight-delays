@@ -5,11 +5,10 @@
 % The following script is divided into 7 sections:
 % 1: Importing the Required Datasets
 % 2: Building the Flight Delay Matrices
-% 3: Conducting the Delay Analysis
-% 4: Markov Chain Computations
-% 5: Querying Route-specific data
-% 6: Additional Plots
-% 7: Storing the Data
+% 3: Markov Chain Computations
+% 4: Querying Route-specific data
+% 5: Additional Plots
+% 6: Storing the Data
 
 %% 1a: Delay Matrix
 
@@ -27,7 +26,7 @@ Aircraft = N_Data{2:42,10};
 % information for 7923 airplanes within the total US fleet, across 15
 % different commercial airlines.
 
-%% 2: Building the Delay Matrices
+%% 2a: Building the Delay Matrices
 
 % Variables of Interest (columns in the Delay_Data matrix):
 % Quarter: 2
@@ -166,7 +165,7 @@ for k = 1:l
 
 end
 
-%% 3: Conducting the Delay Analysis
+%% 2b: Conducting the Delay Analysis
 
 % Computing the average delay on each route 
 % (total delay minutes/# of delayed flights)
@@ -229,7 +228,7 @@ M_Airlines(:,4) = M_Airlines(:,1)./M_Airlines(:,2); % Average delay
 M_Airlines(:,5) = M_Airlines(:,2)./M_Airlines(:,3); % Probability of delay
 M_Airlines(isnan(M_Airlines)) = 0;
 
-%% 4: Markov Chain Computations
+%% 3: Markov Chain Computations
 
 % Computing the flight delays matrix out of an airport 
 % Like before, the rows of this matrix represent the origin airports, while
@@ -288,7 +287,7 @@ plot(x,100*s_sorted(1:30),'--o','LineWidth',2)
 ylabel('Probability of Arrival Delay (%)')
 set(gca,'FontSize',12)
 
-%% 5: Quering Route-specific data
+%% 4: Quering Route-specific data
 
 % Inputting the route data
 Origin = 'SFO';
@@ -407,7 +406,7 @@ else
     T.Padding = 'compact';
 end
 
-%% 6: Additional Plotting 
+%% 5: Additional Plotting 
 
 % Aircraft Data Plot: finding the expected delays, by aircraft type
 figure
@@ -449,7 +448,7 @@ plot(x_air,100*M_Airlines(AA_in,5),'--o','LineWidth',2)
 ylabel('Probability of Arrival Delay (%)')
 set(gca,'FontSize',12)
 
-%% 7: Exporting the data into excel sheets
+%% 6: Exporting the data into excel sheets
 
 % Exporting the average D, E, P and Markov matrices
 % (the code below can be modified to export any specific matrix, whether
