@@ -19,7 +19,7 @@ In this repository, we provide an overview of the MATLAB script utilized to:
 
 ---
 <a name="importing"></a>
-### Importing the Datasets
+### 1: Importing the Datasets
 
 **Description:** In this section of the code, the two datasets utilized in this work are imported. These are:
 * 'Delay Data.xlsx' (the version utilized in this work can be found on this [online](https://mitprod-my.sharepoint.com/:f:/g/personal/andyeske_mit_edu/El17ZquVEvNIqZzj7RC4w_QBmxD9QLxfptm6CgCZwRF65Q?e=T1Ckal) folder). This datatable contained information about every flight operated in the United States during January of 2023. 
@@ -37,9 +37,9 @@ Both data sources were extracted from data made publicly available by the United
 
 ---
 <a name="building"></a>
-### Building the Flight Delay Matrices 
+### 2: Building the Flight Delay Matrices 
 
-**Description:** In this section, the P (probability), D (delay), and E (expected delay) matrices are constructed. Each of these three matrix types will come in three varieties: day of the week (i.e., ```D_day ```), airline carrier (i.e., ```D_airline```), and aircraft type (i.e., ```D_airplane```). The explanation for each type of matrix follows below:
+**Description:** In this section, the P (probability), D (delay), and E (expected delay) matrices are constructed. Each of these three matrix types will come in three varieties: day of the week (i.e., ```D_day```), airline carrier (i.e., ```D_airline```), and aircraft type (i.e., ```D_airplane```). The explanation for each type of matrix follows below:
 
   ```
   - D_day: Average delay on each route, indexed by the day of the week. The 
@@ -63,7 +63,7 @@ Both data sources were extracted from data made publicly available by the United
 
 ---
 <a name="conducting"></a>
-### Conducting the Delay Analysis
+### 3: Conducting the Delay Analysis
 
 **Description:** In this section
 
@@ -73,7 +73,7 @@ Both data sources were extracted from data made publicly available by the United
 
 ---
 <a name="markov"></a>
-### Markov Chain Computations
+### 4: Markov Chain Computations
 
 **Description:** In this section
 
@@ -85,7 +85,7 @@ Both data sources were extracted from data made publicly available by the United
 
 ---
 <a name="querying"></a>
-### Querying Route-specific Data
+### 5: Querying Route-specific Data
 
 **Description:** In this section
 
@@ -97,9 +97,21 @@ Both data sources were extracted from data made publicly available by the United
 
 ---
 <a name="additional"></a>
-### Additional Plots
+### 6: Additional Plots
 
-**Description:** In this section
+**Description:** In this section, two additional plots are generated, corresponding to the network average delays disaggregated by airline and aircraft type. It is possible to modify the code in [ Section 2 ](#building) to display these results according to a particular day of the week, as opposed to the average. The following two plots are generated: 
+
+<p align="left">
+<img src="https://github.com/andyeske/Flight-delays/blob/main/Sample%20Plots/Delay%20by%20Airline.jpg" width="500"> 
+
+**Figure:** _Delay by Airline Carrier. Here, the left y-axis describes the expected arrival flight delay associated with flying on a particular airline carrier, while the right y-axis denotes the probability that a flight on a given airline would be delayed. The results are specific to January 2019 data_.
+</p>
+
+<p align="left">
+<img src="https://github.com/andyeske/Flight-delays/blob/main/Sample%20Plots/Delay%20by%20Aircraft.jpg" width="500"> 
+
+**Figure:** _Delay by Aircraft Type. Here, the left y-axis describes the expected arrival flight delay associated with flying on a particular aircraft type, while the right y-axis denotes the probability that a flight on a given aircraft type would be delayed. The results are specific to January 2019 data_.
+</p>
 
 **User Action:** Simply click on _Run Section_.
 
