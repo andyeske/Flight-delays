@@ -67,7 +67,7 @@ Both data sources were extracted from data made publicly available by the United
 
 **Description:** In this section
 
-**Lines of Code:** Lines 14 - 29.
+**Lines of Code:** Lines 169 - 231.
 
 ([ back to top ](#back_to_top))
 
@@ -77,7 +77,9 @@ Both data sources were extracted from data made publicly available by the United
 
 **Description:** In this section
 
-**Lines of Code:** Lines 14 - 29.
+**User Action:** Simply click on _Run Section_.
+
+**Lines of Code:** Lines 232 - 290.
 
 ([ back to top ](#back_to_top))
 
@@ -87,7 +89,9 @@ Both data sources were extracted from data made publicly available by the United
 
 **Description:** In this section
 
-**Lines of Code:** Lines 14 - 29.
+**User Action:** Simply click on _Run Section_.
+
+**Lines of Code:** Lines 291 - 409.
 
 ([ back to top ](#back_to_top))
 
@@ -97,7 +101,9 @@ Both data sources were extracted from data made publicly available by the United
 
 **Description:** In this section
 
-**Lines of Code:** Lines 14 - 29.
+**User Action:** Simply click on _Run Section_.
+
+**Lines of Code:** Lines 410 - 451.
 
 ([ back to top ](#back_to_top))
 
@@ -105,9 +111,23 @@ Both data sources were extracted from data made publicly available by the United
 <a name="storing"></a>
 ### Storing the Data
 
-**Description:** In this section
+**Description:** In this section, the user can elect to export the D, P, E and S matrices as .csv files, according to the conducted analysis. The default matrices correspond to the average flight delay values, irrespective of day of the week, aircraft type or airline carrier. To export by:
+* Day of the week: modify the index i on D_day(:,:,i), P_day(:,:,i,1), and E_day(:,:,i).
+* Aircraft Type: modify the index i on D_airplane(:,:,i), P_airplane(:,:,i,1), and E_airplane(:,:,i).
+* Airline Carrier: modify the index i on D_airline(:,:,i), P_airline(:,:,i,1), and E_airline(:,:,i).
 
-**Lines of Code:** Lines 14 - 29.
+**User Action:** Modify the following code (lines 468 - 471) according to the user preferences:
+
+  ```
+  writematrix(D_day(:,:,8),'Average D.csv');
+  writematrix(P_day(:,:,8,1),'Average P.csv');
+  writematrix(E_day(:,:,8),'Average E.csv');
+  writematrix(Markov,'Markov.csv');
+  ```
+
+ Then, simply click on _Run Section_. These .csv files will be saved in the same path as the MATLAB code itself.
+
+**Lines of Code:** Lines 452 - 472.
 
 ([ back to top ](#back_to_top))
 
