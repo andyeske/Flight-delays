@@ -1,5 +1,5 @@
 <a name="back_to_top"></a>
-# Quantifying and Exploring Flight Delay Trends in the U.S. Airline Industry
+# Visualizing and Quantifying Flight Delay Trends in the U.S. Airline Industry
 
 In this repository, we provide an overview of the MATLAB (sections 1-6) script utilized to:
 1) Compute the flight delay matrices featured in our work: P (probability), D (delay), E (expected delay), S (Markov transition) and S<sup>n</sup> (stationary distribution).
