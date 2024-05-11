@@ -1,9 +1,11 @@
 <a name="back_to_top"></a>
 # Quantifying and Exploring Flight Delay Trends in the U.S. Airline Industry
 
-In this repository, we provide an overview of the MATLAB script utilized to:
+In this repository, we provide an overview of the MATLAB (sections 1-6) script utilized to:
 1) Compute the flight delay matrices featured in our work: P (probability), D (delay), E (expected delay), S (Markov transition) and S<sup>n</sup> (stationary distribution).
 2) Modify the code to obtain route-specific flight delay information.
+Additionally, this repository also provides guidance on how to use and modify the Python (section 7) script utilized to:
+3) Calculate route delays based on sequences of flights.
 
 ## MATLAB Code
 
@@ -15,6 +17,7 @@ In this repository, we provide an overview of the MATLAB script utilized to:
 4. [ Querying Route-specific Data ](#querying)
 5. [ Additional Plots ](#additional)
 6. [ Storing the Data ](#storing)
+7. [ Sequence of Flights Delays ](#sequence)
 
 ---
 <a name="importing"></a>
@@ -172,6 +175,12 @@ Then, simply click on _Run Section_. These .csv files will be saved in the same 
 **Lines of Code:** Lines 452 - 472.
 
 ([ back to top ](#back_to_top))
+
+---
+<a name="sequence"></a>
+### 7: Sequence of Flights Delays
+
+**Description:** Oli
 
 ## Authors
 
