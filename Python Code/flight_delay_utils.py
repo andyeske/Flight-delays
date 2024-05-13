@@ -25,13 +25,13 @@ def get_delays(df: pd.DataFrame, destinations, origins, confidence = 95, delay_t
     for (dest, origin), group in df_filtered.groupby(['DEST', 'ORIGIN']):
         data = group[delay_type].dropna()
         if len(data) > 1 and data.var() > 0:  # Ensure enough data points and non-zero variance
-            stat, pvalue = ttest_1samp(data, overall_mean)
+            _, pvalue = ttest_1samp(data, overall_mean)
             mean_delays.at[dest, origin] = data.mean() if pvalue < (100-confidence)/100 else overall_mean
             std_delays.at[dest, origin] = data.std() if pvalue < (100-confidence)/100 else overall_std
         else:
             mean_delays.at[dest, origin] = overall_mean
             std_delays.at[dest, origin] = overall_std
-    return mean_delays.fillna(overall_mean), std_delays.fillna(overall_std)
+    return mean_delays.fillna(overall_mean), std_delays.fillna(overall_std) # fill nans with mean values
 
 
 def get_delay_statistics(df, destinations, origins, confidence = 95):
