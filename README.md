@@ -182,8 +182,23 @@ Then, simply click on _Run Section_. These .csv files will be saved in the same 
 <a name="sequence"></a>
 ### 7: Sequence of Flights Delays
 
-**Description:** Oli
+**Description:** 
 
+Here, the user can run a monte carlo simulaiton of an aircraft flying a route that includes multiple airport to examine how the delay propagates through the route. 
+The simulation uses a Bayesian probalistic Graphical Model (PGM) where each node is a Student's _t_-distributed random variable calibrated to fit the USBTS data.
+Note, this code requires [jupyter](https://jupyter.org/install) to be installed on your machine if it isn't already. 
+
+**User Action** Create a conda environment and build the dependencies in `Python\ Code/environment.yml` by navigating to the directory `Python\ Code` and running `conda env create -f environment.yml`.
+If you haven't downloaded conda, follow these instuctions [here](https://conda.io/projects/conda/en/latest/user-guide/install/index.html). Next, run the following command to add the environment to jupyter notebook `python -m ipykernel install --user --name=myenv --display-name "Python (monte_carlo)"`
+
+Run the jupyter notebook located in `Python\ Code/final_project.ipynb` by typing `jupyter notebook` in your terminal then navigating to `Python\ Code/final_project.ipynb`.
+Enter the route you want to simulate in the section *Simulatate a flight trajectory using a Monte Carlo Simulation* and changed the variable named `path` in the cell below the title.
+You can create a route of whatever number of stops you would like. In addition, you can modify the number of runs in the simulation by changing the variable `no_runs`.
+The output shoudl be as follows:
+
+![alt text](airports.png){:width="500px"}
+![alt text](routes.png){:width="500px"}
+![alt text](path.png){:width="500px"}
 ## Authors
 
 Andy Eskenazi, Marek Homola, Olivier Ng'weno Kigotho <br />
