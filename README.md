@@ -85,7 +85,7 @@ The results from taking the 20th power of the Markov transition probility matrix
 <p align="left">
 <img src="https://github.com/andyeske/Flight-delays/blob/main/Sample%20Plots/Infinite%20Walks.jpg" width="500"> 
 
-**Figure:** _Stationary Distribution Results_.
+**Figure 1:** _Stationary Distribution Results_.
 </p>
 
 According to this plot, in the infinite random walks thought experiment, a passenger leaving out of Denver, irrespective of where it will ultimately end its journey, would be the most likely to be delayed, followed by Atlanta, Chicago, Dallas and Las Vegas.
@@ -105,7 +105,7 @@ According to this plot, in the infinite random walks thought experiment, a passe
 <p align="left">
 <img src="https://github.com/andyeske/Flight-delays/blob/main/Sample%20Plots/Route%20Example.jpg" width="500"> 
 
-**Figure:** _Route-specific flight delay statistics, corresponding to SFO - HNL_.
+**Figure 2:** _Route-specific flight delay statistics, corresponding to SFO - HNL_.
 </p>
 
 Here, the top most plot displays three bars, for the selected day of week, average weekday, and airport average expected arrival delays; the middle plot presents the arrival delays on the route, by operating airline; the bottom plots shows the aircraft-specific data for the route. The left y-axis describes the expected arrival flight delay, while the right y-axis denotes the probability that the would be delayed. The results are specific to January 2019 data.
@@ -137,13 +137,13 @@ Then, simply click on _Run Section_.
 <p align="left">
 <img src="https://github.com/andyeske/Flight-delays/blob/main/Sample%20Plots/Delay%20by%20Airline.jpg" width="500"> 
 
-**Figure:** _Delay by Airline Carrier_.
+**Figure 3:** _Delay by Airline Carrier_.
 </p>
 
 <p align="left">
 <img src="https://github.com/andyeske/Flight-delays/blob/main/Sample%20Plots/Delay%20by%20Aircraft.jpg" width="500"> 
 
-**Figure:** _Delay by Aircraft Type_.
+**Figure 4:** _Delay by Aircraft Type_.
 </p>
 
 Here, the left y-axis describes the expected arrival flight delay associated with flying on a particular airline carrier and/or aircraft type, while the right y-axis denotes the probability that a flight on a given airline and/or aircraft would be delayed. The results are specific to January 2019 data.
@@ -182,23 +182,37 @@ Then, simply click on _Run Section_. These .csv files will be saved in the same 
 <a name="sequence"></a>
 ### 7: Sequence of Flights Delays
 
-**Description:** 
+**Description:** In this section, the user can run a Monte Carlo simulaiton of an aircraft flying a route that includes multiple airports to examine how the delay propagates through the route. 
+The simulation uses a Bayesian probalistic Graphical Model (PGM) where each node is a Student's _t_-distributed random variable calibrated to fit the US BTS data.
+Notice that this code requires [jupyter](https://jupyter.org/install) to be installed on your machine if it isn't already. 
 
-Here, the user can run a monte carlo simulaiton of an aircraft flying a route that includes multiple airport to examine how the delay propagates through the route. 
-The simulation uses a Bayesian probalistic Graphical Model (PGM) where each node is a Student's _t_-distributed random variable calibrated to fit the USBTS data.
-Note, this code requires [jupyter](https://jupyter.org/install) to be installed on your machine if it isn't already. 
-
-**User Action** Create a conda environment and build the dependencies in `Python\ Code/environment.yml` by navigating to the directory `Python\ Code` and running `conda env create -f environment.yml`.
+**User Action:** Create a conda environment and build the dependencies in `Python\ Code/environment.yml` by navigating to the directory `Python\ Code` and running `conda env create -f environment.yml`.
 If you haven't downloaded conda, follow these instuctions [here](https://conda.io/projects/conda/en/latest/user-guide/install/index.html). Next, run the following command to add the environment to jupyter notebook `python -m ipykernel install --user --name=myenv --display-name "Python (monte_carlo)"`
 
 Run the jupyter notebook located in `Python\ Code/final_project.ipynb` by typing `jupyter notebook` in your terminal then navigating to `Python\ Code/final_project.ipynb`.
 Enter the route you want to simulate in the section *Simulatate a flight trajectory using a Monte Carlo Simulation* and changed the variable named `path` in the cell below the title.
 You can create a route of whatever number of stops you would like. In addition, you can modify the number of runs in the simulation by changing the variable `no_runs`.
-The output shoudl be as follows:
 
-![alt text](airports.png){:width="500px"}
-![alt text](routes.png){:width="500px"}
-![alt text](path.png){:width="500px"}
+The output should be the following three figures:
+
+<p align="left">
+<img src="https://github.com/andyeske/Flight-delays/blob/main/Sample%20Plots/airports.png" width="500"> 
+
+**Figure 5:** _Mean change in the delay time at certain airports. The time corresponds to the mean difference between the arrival delay and the departure delay of an aircraft passing through an airport for airports with a statistically significant number of samples (p-value less than 0.05_.
+</p>
+
+<p align="left">
+<img src="https://github.com/andyeske/Flight-delays/blob/main/Sample%20Plots/routes.png" width="500"> 
+
+**Figure 6:** _Mean change in the delay time on certain routes. The time corresponds to the mean difference between the departure delay and the arriva delay for routes with a statistically significant number of samples (p-value less than 0.05)_.
+</p>
+
+<p align="left">
+<img src="https://github.com/andyeske/Flight-delays/blob/main/Sample%20Plots/path.png" width="500"> 
+
+**Figure 7:** _Flights flying from BOS to JFK then to MIA. The top plot shows the distribution of arrival times in MIA if the flight leaves on-time from BOS. The bottom distribution has an unknown departure time from BOS_.
+</p>
+
 ## Authors
 
 Andy Eskenazi, Marek Homola, Olivier Ng'weno Kigotho <br />
