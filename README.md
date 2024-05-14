@@ -182,7 +182,7 @@ Then, simply click on _Run Section_. These .csv files will be saved in the same 
 <a name="sequence"></a>
 ### 7: Sequence of Flights Delays
 
-**Description:** In this section, the user can run a Monte Carlo simulaiton of an aircraft flying a route that includes multiple airports to examine how the delay propagates through the route. 
+**Description:** In this section, the user can run a Monte Carlo simulation of an aircraft flying a route that includes multiple airports to examine how the delay propagates through the route. 
 The simulation uses a Bayesian probalistic Graphical Model (PGM) where each node is a Student's _t_-distributed random variable calibrated to fit the US BTS data.
 Notice that this code requires [jupyter](https://jupyter.org/install) to be installed on your machine if it isn't already. 
 
